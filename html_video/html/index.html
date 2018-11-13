@@ -2,9 +2,20 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>播放</title>
 </head>
 <body>
-
+<button onclick="playAndStop()">播放/暂停</button>
+<audio id="audo" src="../raw/一百万个可能.mp3" controls="controls">浏览器不支持</audio>
+<script>
+   var audo =  document.getElementById("audo")
+    function playAndStop() {
+        if(audo.paused){
+            audo.play()
+        }else {
+            audo.pause()
+        }
+    }
+</script>
 </body>
 </html>
