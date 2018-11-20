@@ -7,13 +7,28 @@
 <body>
 <button onclick="playAndStop()">播放/暂停</button>
 <audio id="audo" src="../raw/一百万个可能.mp3" controls="controls">浏览器不支持</audio>
+<!--<video src="../raw/v1920bg(2).mp4" controls="controls">您的浏览器不支持</video>-->
+<!--兼容多个浏览器时，可以用下面这种方法，添加多种格式的视频文件-->
+<button onclick="videoPlayAndStop()">播放暂停</button>
+<video id="video" src="../raw/v1920bg(2).mp4" controls="controls" style="width: 500px" height="500px">
+    <source src="../raw/v1920bg(2).mp4">
+    您的浏览器不支持
+</video>
 <script>
-   var audo =  document.getElementById("audo")
+    var audo = document.getElementById("audo")
+    var video = document.getElementById("video")
     function playAndStop() {
-        if(audo.paused){
+        if (audo.paused) {
             audo.play()
-        }else {
+        } else {
             audo.pause()
+        }
+    }
+    function videoPlayAndStop() {
+        if(video.paused){
+            video.play()
+        }else {
+            video.pause()
         }
     }
 </script>
