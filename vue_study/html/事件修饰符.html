@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../vue2.5.21.js"></script>
+    <style>
+        .inner {
+            height: 150px;
+            background-color: darkcyan;
+        }
+    </style>
+</head>
+<body>
+<div id="app">
+    <!--使用.self 实现只有点击当前元素的时候，才会触发事件处理函数-->
+    <div class="inner" @click="div1Handler" >
+        <!--//终止冒泡，click.stop-->
+        <input type="button" value="点击" @click.stop="buttonHandler">
+
+        <!--使用.capture实现捕获触发事件的机制-->
+        <input type="button" value="点击" @click.capture="btnHandler">
+    </div>
+    <!--使用.prevent阻止默认行为-->
+    <a href="http://www.baidu.com" @click.prevent="aHandler">百度</a>
+
+</div>
+<script>
+    var vm = new Vue({
+        el: '#app',
+        data: {},
+        methods: {
+            div1Handler() {
+                alert("触发了 inner div 点击事件")
+            },
+            buttonHandler() {
+                alert("触发了 button  点击事件")
+            },
+            aHandler(){
+                alert("触发了 a  点击事件")
+            },
+            btnHandler(){
+                alert("触发了 btn  点击事件")
+            }
+        }
+    })
+</script>
+
+</body>
+</html>
