@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:v-bind="http://www.w3.org/1999/xhtml" xmlns:v-on="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../vue2.5.21.js"></script>
+    <!--在网络慢的时候，这个属性就不显示，直到结果回来-->
+    <style>
+        [v-cloak] {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+<!--将来new 的vue实例，会控制这个元素中的所有内容-->
+<div id="app">
+    <!--使用 v-cloak 能解决差值表达式的问题-->
+    <p v-cloak>+++++++{{msg}}++++++</p>
+    <!--默认没有闪烁问题-->
+    <h4 v-text="msg">++++++</h4>
+    <div>{{msg2}}</div>
+    <div v-text="msg2"></div>
+    <div v-html="msg2"></div>
+    <!--v-bind是vue中，提供的用于绑定属性的指令-->
+    <input type="button" value="按钮" v-bind:title="mytitle+'123'">
+    <input type="button" value="按钮" :title="mytitle+'123'">
+    <!--vue中提供了，v-no 事件绑定机制-->
+    <input type="button" value="按钮" :title="mytitle+'123'" v-on:click="show">
+</div>
+<script>
+
+    //创建一个vue实例-->
+    //当我们导入包之后，在浏览器的内存中，就多了一个vue构造函数-->
+    //vm就是调度者
+    var vm = new Vue({
+
+        el: '#app',//当前new的这个vue实例，要控制页面的哪个区域
+        //data 就是mvvm 中的m层
+        data: { //data属性中，存放的el中要用到的数据
+            msg: '欢迎学习vue',//通过vue提供的指令，很方便的把数据渲染到页面上，程序员不在手动操作dom元素了
+            msg2: '<h1>我是和H1</h1>',
+            mytitle: '这是自己的title'
+
+        },
+        methods: {//这里定义方法
+            show: function () {
+                alert('hello')
+            }
+        }
+    })
+</script>
+</body>
+</html>
