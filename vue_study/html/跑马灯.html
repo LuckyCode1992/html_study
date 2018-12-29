@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../vue2.5.21.js"></script>
+</head>
+<body>
+
+<div id="app">
+    <input type="button" value="浪起来" @click="lang">
+    <input type="button" value="低调" @click="stop">
+    <h4>{{msg}}</h4>
+</div>
+<script>
+    //在vm中，如果想要获取data的数据，或者methods中的方法，要用this,这里的this就表示vm实例对象
+    var vm = new Vue({
+        el: '#app',
+        data: {
+            msg: '猥琐发育，别浪!',
+            intervalId: null
+        },
+        methods: {
+            // lang:function () {
+            //
+            // }
+            //上面的方法和下面等价
+            lang() {
+                // _this = this
+                // setInterval(function () {
+                //     var start = _this.msg.substring(0, 1)
+                //     var end = _this.msg.substring(1)
+                //     _this.msg = end + start
+                // },400)
+                //上述是解决this指向问题，还有一种方法，就是建造函数
+                if (this.intervalId == null) {
+                    this.intervalId = setInterval(() => {
+                        var start = this.msg.substring(0, 1)
+                        var end = this.msg.substring(1)
+                        this.msg = end + start
+                    }, 300)
+                }
+
+            },
+            stop() {
+                clearInterval(this.intervalId)
+                this.intervalId = null
+            }
+        }
+    })
+</script>
+</body>
+</html>
