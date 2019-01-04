@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../vue2.5.21.js"></script>
+</head>
+<body>
+<div id="app">
+
+    <p v-for="item in list">{{item.id}}---{{item.name}}</p>
+    <br>
+    <p v-for="(item,i) in list">{{item.id}}---{{item.name}}---索引是{{i}}</p>
+
+</div>
+<script>
+    var vm = new Vue({
+        el: '#app',
+        data: {
+            list: [
+                {id:1,name:'hello1'},
+                {id:2,name:'hello2'},
+                {id:3,name:'hello3'},
+                {id:4,name:'hello4'},
+                {id:5,name:'hello5'},
+
+            ]
+        },
+        methods: {}
+    })
+</script>
+</body>
+</html>
