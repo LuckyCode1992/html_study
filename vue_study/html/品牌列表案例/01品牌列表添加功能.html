@@ -9,15 +9,27 @@
 <body>
 <div id="app">
 
+    <div class="">
+        <div class=""></div>
+    </div>
+
     <table class="table table-bordered table-hover table-striped">
         <thead>
         <tr>
-            <th>ss</th>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Ctime</th>
+            <th>Opration</th>
         </tr>
         </thead>
         <tbody>
-        <tr>
-            <td>jj</td>
+        <tr v-for="item in list" :key="item.id">
+            <td>{{item.id}}</td>
+            <td>{{item.name}}</td>
+            <td>{{item.ctime}}</td>
+            <td>
+                <a href="">删除</a>
+            </td>
         </tr>
         </tbody>
     </table>
@@ -25,7 +37,12 @@
 <script>
     var vm = new Vue({
         el: '#app',
-        data: {},
+        data: {
+            list: [
+                {id: 1, name: '奔驰', ctime: new Date()},
+                {id: 2, name: '宝马', ctime: new Date()}
+            ]
+        },
         methods: {}
     })
 </script>
