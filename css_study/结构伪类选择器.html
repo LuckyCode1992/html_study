@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        /*选择第一个孩子*/
+        li:first-child {
+            color: pink;
+        }
+
+        /*最后一个孩子*/
+        li:last-child {
+            color: purple;
+        }
+
+        /*选择指定位置的孩子*/
+        li:nth-child(4) {
+            color: deepskyblue;
+        }
+
+        /*选择奇数*/
+        li:nth-child(odd) {
+            color: green;
+        }
+
+        /*选择偶数*/
+        li:nth-child(even) {
+            color: #17a2b8;
+        }
+
+        /*选择所有*/
+        li:nth-child(n) {
+            color: darkgoldenrod;
+        }
+
+        /*n是从0开始到最后的,所以可以通过n的方程式,写选择过滤*/
+        /*选择所有偶数*/
+        li:nth-child(n) {
+            color: darkblue;
+        }
+
+        /*选择所有奇数*/
+        li:nth-child(2n-1) {
+            color: darkmagenta;
+        }
+
+    </style>
+</head>
+<body>
+<ul>
+    <li>第一个孩子</li>
+    <li>第二个孩子</li>
+    <li>第三个孩子</li>
+    <li>第四个孩子</li>
+    <li>第五个孩子</li>
+    <li>第六个孩子</li>
+    <li>第七个孩子</li>
+    <li>第八个孩子</li>
+    <li>第九个孩子</li>
+
+</ul>
+</body>
+</html>

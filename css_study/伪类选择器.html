@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        /*未访问的 链接*/
+        a:link {
+            font-size: 16px;
+            color: gray;
+            font-weight: 700;
+        }
+
+        /*已经访问的链接*/
+        a:visited {
+            font-size: 16px;
+            color: orange;
+            font-weight: 700;
+        }
+
+        /*鼠标移动到链接上*/
+        a:hover {
+            font-size: 16px;
+            color: red;
+            font-weight: 700;
+        }
+
+        /*选定链接*/
+        a:active {
+            font-size: 16px;
+            color: green;
+            font-weight: 700;
+        }
+    </style>
+</head>
+<body>
+伪类选择器中的 链接伪类选择器 主要针对 a标签,style中的顺序不能改变,link->visited->hover->active  lv包包ha(好)
+<div><a href="#">秒杀</a>
+    <a href="#">闪够</a>
+</div>
+
+</body>
+</html>
