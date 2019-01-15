@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .red{
+            color: red;
+        }
+        #pink{
+            color: pink;
+        }
+    </style>
+</head>
+<body>
+<div class="red">张三</div>
+<div id="pink">李四</div>
+<div class="red">王五</div>
+<div id="pink">马六</div>
+<!--class 可以使用多次，但是id只能使用一次-->
+<!--在浏览器中,依然会渲染错误的使用多次id,但dom获取的时候,只能获取第一个-->
+<script>
+    var pin = document.getElementById("pink")
+   var re =  document.getElementsByClassName("red")
+    console.log(pin)
+    console.log(re)
+</script>
+</body>
+</html>
