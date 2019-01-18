@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        /*属性选择器用[]表示*/
+        a[title]{
+            color: red;
+        }
+        input[type = text]{
+            color: red;
+        }
+        /*^=表示以什么开始*/
+        p[class^=font]{
+            color: pink;
+        }
+        /*$=表示以什么结束*/
+        p[class$=footer]{
+            color: skyblue;
+        }
+        /* *=表示包含什么 */
+        p[class*=tao]{
+            color: green;
+        }
+    </style>
+</head>
+<body>
+<a href="#" title="我是一个百度">百度</a>
+<a href="#" title="我是一个新浪">新浪</a>
+<a href="#">搜狐</a>
+<a href="#">网易</a>
+<a href="#">土豆</a>
+<input type="text" value="文本框">
+<input type="text" value="文本框">
+<input type="text" value="文本框">
+<input type="submit">
+<input type="submit">
+<input type="submit">
+<input type="reset">
+<input type="reset">
+<input type="reset">
+<p class="font12">属性选择器</p>
+<p class="font55">属性选择器</p>
+<p class="font166">属性选择器</p>
+<p class="fontqwe">属性选择器</p>
+<p class="sub-footer">属性选择器</p>
+<p class="jd-footer">属性选择器</p>
+<p class="news-jd-nav">属性选择器</p>
+<p class="news-tao-header">属性选择器</p>
+<p class="news-tao">属性选择器</p>
+<p class="tao-header">属性选择器</p>
+</body>
+</html>
