@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        /*类选择器*/
+        .demo{
+        }
+        /*伪类选择器*/
+        :first-child{
+        }
+        /*伪元素选择器*/
+        ::first-letter{
+        }
+        /*选择第一个字*/
+        p::first-letter{
+            color: red;
+            font-size: 50px;
+        }
+        /*选择第一行*/
+        p::first-line{
+            color: green;
+        }
+        /*选中文字的时候，变换*/
+        p::selection{
+            color: pink;
+        }
+
+        /*before和after在盒子的内部前面或者后面插入*/
+        div::before{
+            color: pink;
+            content: "我";
+        }
+        div::after{
+            color: red;
+            content: "很好";
+        }
+    </style>
+</head>
+<body>
+<h1>freestyle</h1>
+<p>截至2013年5月1日，这支音乐录像带在YouTube网站的点击量为15.78亿次，超越贾斯汀·比伯的单曲《Baby》成为该网站历史上观看次数最多的视频。</p>
+<div>今年</div>
+</body>
+</html>
