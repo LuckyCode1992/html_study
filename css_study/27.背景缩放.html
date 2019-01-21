@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+        body {
+            background-color: skyblue;
+        }
+        div {
+            width: 600px;
+            height: 800px;
+            background: hotpink url("images/31.jpg") no-repeat top left;
+
+            /*我们插入的图片 直接用宽高设置，背景图片用下面*/
+            /*直接设置宽度或者高度 用 px尽量只改一个值,防止缩放失真*/
+            /*background-size: 200px;*/
+
+            /*用百分比设置*/
+            /*background-size: 50%;*/
+
+            /*自动缩放，填满盒子，等比例缩放，超出部分隐藏*/
+            /*background-size: cover;*/
+
+            /*自动等比例缩放，保证全部图片在盒子里，有一个方向铺满即停止*/
+            background-size: contain;
+        }
+    </style>
+</head>
+<body>
+<div>
+
+</div>
+</body>
+</html>
