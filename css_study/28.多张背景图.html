@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+        body {
+            background-color: skyblue;
+        }
+        /*一个元素可以设置多重背景图像*/
+        /*每组属性间用逗号分隔*/
+        /*如果设置多重背景图存在交集，前面的背景图和覆盖在后面的背景图之上*/
+        /*为了避免背景色将图像盖住，背景色放在最后一组上*/
+        div {
+            width: 1000px;
+            height: 1000px;
+            background:  url("images/45.jpg") no-repeat top left,
+            url("images/44.jpg") no-repeat bottom right pink;
+
+
+        }
+    </style>
+</head>
+<body>
+<div>
+
+</div>
+</body>
+</html>
