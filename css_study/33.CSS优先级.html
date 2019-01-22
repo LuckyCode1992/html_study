@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        /*标签选择器 权重 0，0，0，1*/
+        p {
+            color: red;
+        }
+
+        /*类选择器（伪类选择器） 权重 0，0，1，0*/
+        .king {
+            color: yellow;
+        }
+
+        /*:first-child {*/
+        /*color: blue;*/
+        /*}*/
+        /*id选择器 权重 0，1，0，0*/
+        #wang {
+            color: green;
+        }
+
+        /*!important 权重 无穷大*/
+        p {
+            color: pink !important;
+        }
+
+        /*0,0,1,0+0,0,0,1 = 0,0,1,1*/
+        .ul li {
+            color: pink;
+        }
+
+        /*ul 0,0,0,1,li 0,0,0,1 叠加=0,0,0,2*/
+        ul li {
+            color: green;
+        }
+
+        li {
+            color: red;
+        }
+
+        /*
+        注意 0，0，0，5+0，0，0，0，5 = 0，0，0，10
+        */
+
+        .daohanglan {
+            color: purple;
+        }
+    </style>
+</head>
+<body>
+
+<div>
+    <!--行内样式 权重 1，0，0，0-->
+    <p class="king" id="wang" style="color: deepskyblue">王者</p>
+</div>
+<div>
+    <nav>
+        <ul class="ul">
+            <li>李白</li>
+            <li>李黑</li>
+            <li>李红</li>
+        </ul>
+    </nav>
+</div>
+
+<div class="daohanglan">
+    <ol>
+        <li>继承的权重为0</li>
+    </ol>
+</div>
+
+
+</body>
+</html>
