@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            /*边框颜色*/
+            border-color: red;
+            /*边框宽度*/
+            border-width: 1px;
+            /*边框风格 必填*/
+            border-style: solid;
+        }
+        input {
+            border-width: 0px;
+        }
+
+        .user {
+            border-width: 1px;
+            border-color: red;
+            border-style: solid;
+        }
+        /*边框可以分别给上下左右单独设置*/
+        .nic {
+            border-top-width: 1px;
+            border-top-color: red;
+            border-top-style: dashed;
+        }
+        .email {
+            border-top: 1px solid pink;
+            border-left: 3px solid green;
+        }
+    </style>
+</head>
+<body>
+<div>我是一个盒子</div>
+<br>
+用户名<input type="text" class="user">
+昵称<input type="text" class="nic">
+邮箱<input type="text" class="email">
+</body>
+</html>
