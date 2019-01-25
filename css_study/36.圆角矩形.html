@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            border: 1px solid red;
+        }
+        div:first-child ,div:last-child {
+            border-radius: 20px; /*写要给值，则4个值都是这个*/
+        }
+        div:nth-child(2) {
+            border-radius: 50%; /*圆形*/
+        }
+        div:nth-child(3) {
+            border-radius: 20px 40px; /*两个值，是对角线相同*/
+        }
+        div:nth-child(4){
+            border-radius: 10px 40px 80px; /*顺时针方向，依次赋值，剩下的和对角线相同*/
+        }
+        div:nth-child(5) {
+            border-radius: 10px 20px 30px 40px;
+        }
+    </style>
+</head>
+<body>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
+</body>
+</html>
