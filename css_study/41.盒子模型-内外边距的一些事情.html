@@ -10,6 +10,48 @@
             margin: 0;
             padding: 0;
         }
+
+        span {
+            color: red;
+            background-color: pink;
+            /*行内元素，尽量不要设置上下边距*/
+            margin: 0 30px;
+            padding: 0 50px;
+        }
+
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+
+        }
+        /*同级外边距合并，只出现在垂直的块级盒子 以最大的外边距为准，比如 下面，结果是100px  避免即可*/
+        section > div:first-child {
+            margin-bottom: 50px;
+        }
+
+        section > div:last-child {
+            margin-top: 100px;
+            background-color: purple;
+        }
+
+        /*嵌套块元素垂直外边距合并问题*/
+        #father {
+            margin-top: 100px;
+            width: 300px;
+            height: 300px;
+            background-color: pink;
+            /*解决外边距合并（塌陷）问题 下面都可以*/
+            /*border: 1px solid red;*/
+            /*padding: 1px;*/
+            overflow: hidden;
+        }
+        #son {
+            margin-top: 30px;
+            width: 200px;
+            height: 200px;
+            background-color: purple;
+        }
     </style>
 </head>
 <body>
@@ -20,5 +62,16 @@
     <li>基督教</li>
     <li>基督教</li>
 </ul>
+<hr>
+<span>sdjlkdj</span>
+<hr>
+<section>
+    <div></div>
+    <div></div>
+</section>
+<hr>
+<div id="father">
+    <div id="son"></div>
+</div>
 </body>
 </html>
