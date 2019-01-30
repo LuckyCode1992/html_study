@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div:first-child {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            float: left;
+        }
+
+        /* 浮动脱离标准流，不占位置，回影响标准流。浮动只有左右浮动*/
+        /*浮动在天上，标准流在地下*/
+        div:last-child {
+            width: 150px;
+            height: 300px;
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+<div></div>
+<div></div>
+
+</body>
+</html>
