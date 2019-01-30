@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* float 浮 漏 特 三大特点*/
+        /* 浮 ： 加了浮动的盒子是浮起来的，漂浮在其他的标准流盒子上面*/
+        /* 漏： 加了浮动的盒子，不占位置，它浮起来了，它原来的位置漏给了标准流的盒子*/
+        /* 特： 特别注意，首先浮动的盒子需要和标准流的父级搭配使用，其次 特别注意 浮动可以使元素显示模式体现为行内块特性*/
+
+
+
+        .top_nav ul {
+            background-color: #333;
+            width: 240px;
+            height: 440px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            float: left;
+        }
+
+        .top_nav ul li {
+            height: 40px;
+            line-height: 40px;
+            padding-left: 30px;
+        }
+
+        .top_nav ul li:hover {
+            background-color: orange;
+        }
+
+        a {
+            color: white;
+            text-decoration: none;
+            font-size: 15px;
+        }
+
+        .top_nav .right-content {
+            width: 960px;
+            height: 460px;
+            background-color: pink;
+            float: left;
+        }
+
+        /*清除浮动，才能回归原本的文档流（普通流）*/
+        .top_nav {
+            overflow: auto;
+            /*处理兼容性问题*/
+            zoom: 1;
+        }
+
+        .bottom {
+            margin-top: 20px;
+            overflow: auto;
+            /*处理兼容性问题*/
+            zoom: 1;
+        }
+        .bottom div:first-child {
+            width: 240px;
+            height: 170px;
+            background-color: pink;
+            float: left;
+
+        }
+        .bottom div:nth-child(2) {
+            width: 240px;
+            height: 170px;
+            background-color: deeppink;
+            float: left;
+            margin-left: 20px;
+        }
+
+        .bottom div:nth-child(3) {
+            width: 240px;
+            height: 170px;
+            background-color: purple;
+            float: left;
+            margin-left: 20px;
+        }
+        .bottom div:nth-child(4) {
+            width: 240px;
+            height: 170px;
+            background-color: red;
+            float: left;
+            margin-left: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="top_nav">
+    <ul>
+        <li><a href="#">手机电话卡</a></li>
+        <li><a href="#">电视盒子</a></li>
+        <li><a href="#">笔记本平板</a></li>
+        <li><a href="#">家电</a></li>
+        <li><a href="#">手机电话卡</a></li>
+        <li><a href="#">出行</a></li>
+        <li><a href="#">智能</a></li>
+        <li><a href="#">电源</a></li>
+        <li><a href="#">健康</a></li>
+        <li><a href="#">耳机</a></li>
+        <li><a href="#">生活</a></li>
+    </ul>
+    <div class="right-content"></div>
+</div>
+
+<div class="bottom">
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+</div>
+
+
+</div>
+
+</body>
+</html>
