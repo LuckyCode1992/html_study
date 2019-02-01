@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .top {
+            height: 60px;
+            background-color: #000;
+        }
+
+        .banner {
+            width: 960px;
+            height: 400px;
+            margin: 20px auto;
+            background-color: skyblue;
+            border-radius: 15px;
+        }
+
+        .main {
+            width: 960px;
+            height: 200px;
+            margin: 0 auto;
+        }
+
+        ul {
+            list-style: none;
+        }
+        .main ul li {
+            width: 25%;
+            height: 200px;
+            float: left;
+        }
+        .main ul li:nth-child(even){
+            background-color: purple;
+        }
+        .main ul li:nth-child(2n-1) {
+            background-color: pink;
+        }
+        .footer {
+            height: 100px;
+            background-color: #000;
+        }
+    </style>
+</head>
+<body>
+<div class="top">top</div>
+<div class="banner">banner</div>
+<div class="main">
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+    </ul>
+</div>
+<div class="footer">footer</div>
+</body>
+</html>
