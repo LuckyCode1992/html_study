@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        /*清除浮动的本质：父元素没有给高度，子元素浮动后，父元素就没有高度了，所以，解决的是父元素没有高度的问题*/
+
+        .son1 {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            float: left;
+        }
+
+        .son2 {
+            width: 300px;
+            height: 200px;
+            background-color: red;
+            float: left;
+        }
+
+        .other {
+            width: 600px;
+            height: 600px;
+            background-color: purple;
+        }
+
+        /* 清除浮动影响 */
+        /*.clear {*/
+        /*clear: both;*/
+        /*}*/
+
+        /*父元素添加 overflow*/
+        /* 触发 BFC 可以清除浮动 ，这是解决方案 */
+        /*.father {*/
+            /*overflow: hidden;*/
+        /*}*/
+
+        /*使用after伪元素 清除浮动*/
+        /*.clearfix:after {*/
+            /*!*转换为块级元素*!*/
+            /*display: block;*/
+            /*!*内容 为 小点 尽量添加 防止旧版浏览器空袭*!*/
+            /*content: ".";*/
+            /*height: 0;*/
+            /*visibility: hidden;*/
+            /*!*清除浮动*!*/
+            /*clear: both;*/
+        /*}*/
+        /*ie 6 7 处理的方式*/
+        /*.clearfix {*/
+            /*!* * 代表ie 6 7 能识别的特殊符号  zoom 就是 ie 6 7 清除浮动的方法*!*/
+            /**zoom: 1;*/
+        /*}*/
+
+        /*双伪元素 清除浮动*/
+        .clearfix:after, .clearfix:before {
+            content: "";
+            /* 触发bfc 防止外边距合并*/
+            display: table;
+        }
+        .clearfix:after {
+            clear: both;
+        }
+        .clearfix {
+            *zoom: 1;
+        }
+
+
+        /*常用第3 4 中方法  伪元素和双伪元素*/
+    </style>
+
+</head>
+<body>
+
+<div class="father clearfix">
+    <div class="son1"></div>
+    <div class="son2"></div>
+    <!--额外标签法（w3c推荐，但很少用） ： 在浮动盒子的后面添加一个空盒子-->
+    <!--<div class="clear"></div>-->
+</div>
+<div class="other"></div>
+</body>
+</html>
