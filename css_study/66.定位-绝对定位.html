@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .div1 {
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+            /*绝对定位*/
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            /* 绝对定位是完全脱离标准流，不占有位置*/
+        }
+
+        .div2 {
+            width: 200px;
+            height: 150px;
+            background-color: purple;
+        }
+
+        .father {
+            width: 300px;
+            height: 300px;
+            background-color: #0b2e13;
+            margin: 100px;
+            /* 父亲有定位 则根据最近的已经定位的父元素（祖先） 进行定位*/
+            position: relative;
+        }
+
+        /* absolute：如果父亲没有定位 ，儿子定位会以浏览器左上角为基准位置 且原来位置不占有*/
+        .son {
+            width: 100px;
+            height: 100px;
+            background-color: lime;
+            position: absolute;
+            top: 100px;
+            left: 100px;
+        }
+
+        .son2 {
+            width: 100px;
+            height: 100px;
+            background-color: purple;
+        }
+    </style>
+</head>
+<body>
+<div class="div1"></div>
+<div class="div2"></div>
+<div class="father">
+    <div class="son">hai</div>
+    <div class="son2"></div>
+</div>
+</body>
+</html>
