@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        div:first-child {
+
+        }
+        div:nth-child(2){
+            background-color: purple;
+            top:30px;
+            left: 30px;
+            z-index: 1;
+        }
+        div:last-child{
+            background-color: skyblue;
+            top:60px;
+            left: 60px;
+        }
+        /*默认是次序是，从下往上覆盖*/
+        /* z-index 默认值是0 取值越大，定位元素在层叠元素中越居上*/
+        /* 如果取值相同，则根据书写顺序，后来居上 */
+        /* 数值不叫单位 */
+        /* 只有相对定位，绝对定位，固定定位 有此属性，其余标准流，浮动，静态定位，无此属性，也不可以指定此属性 */
+    </style>
+</head>
+<body>
+<div></div>
+<div></div>
+<div></div>
+</body>
+</html>
