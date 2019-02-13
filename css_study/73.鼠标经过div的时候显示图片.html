@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+            position: relative;
+            margin: 50px auto;
+            text-align: center;
+            line-height: 100px;
+        }
+        div img {
+            display: none;
+            position: absolute;
+            left: 110px;
+            top: 0;
+        }
+        div:hover img { /*鼠标经过的时候 div里面的img显示*/
+            display: block;
+        }
+    </style>
+</head>
+<body>
+<div>
+    扫二维码
+    <img src="images/47.jpg" width="100px" height="100px">
+</div>
+</body>
+</html>
