@@ -1,0 +1,415 @@
+/*初始化 一般必备*/
+/*清除内外边距*/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/*去除列表样式*/
+ul {
+    list-style: none;
+}
+
+.clearfix:before, .clearfix:after {
+    display: table;
+    content: "";
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+a {
+    color: #050505;
+    /*取消下划线*/
+    text-decoration: none;
+}
+
+/* 所有表单边框为 0 */
+input {
+    border: 0;
+    /*css3 盒子模型 boder和padding都包含到宽度里面去*/
+    box-sizing: border-box;
+}
+
+/* 我们的版心 宽度都是1200 都要居中对其 我们就生命一个公共类 */
+.container {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+body {
+    background-color: #f3f5f7;
+}
+
+/* 1页面头部分*/
+header {
+    height: 100px;
+    /*background-color: pink;*/
+    /*防止外边距合并的为题*/
+    overflow: hidden;
+}
+
+/* 1.1导航栏部分*/
+nav {
+    width: 1366px;
+    height: 42px;
+    /*background-color: purple;*/
+    /*盒子 水平居中对其*/
+    margin: 26px auto;
+}
+
+.logo,
+.navbar,
+.navbar li {
+    float: left;
+}
+
+.navbar {
+    height: 42px;
+    /*行高会继承，所以，给父亲 ，li就垂直居中 对齐了 行高=line-height*/
+    line-height: 42px;
+    margin-left: 50px;
+}
+
+.navbar li a {
+    padding: 0 8px;
+    /*a 是行内元素 给高 需要转换 块元素或者行内块元素*/
+    display: inline-block;
+}
+
+.navbar li a:hover {
+    border-bottom: 2px solid #00a4ff;
+}
+
+/* 1.2 搜索框部分*/
+.search {
+    width: 410px;
+    height: 38px;
+    border: 1px solid #00a4ff;
+    float: right;
+}
+
+/*属性选择器*/
+.search input[type=text] {
+    width: 360px;
+    height: 38px;
+    padding-left: 20px;
+    float: left;
+}
+
+.search input[type=submit] {
+    width: 50px;
+    height: 38px;
+    float: left;
+    background: #00a4ff url("images/search.png") center center no-repeat;
+}
+
+/* 1.3 个人中心部分*/
+.personal {
+    float: right;
+    height: 42px;
+    line-height: 42px;
+    margin-right: 15px;
+    margin-left: 35px;
+}
+
+.personal img {
+    margin: 0 8px;
+}
+
+/* 1页面头部分 end*/
+
+/* 2 banner部分*/
+.banner {
+    height: 420px;
+    background-color: #1c036c;
+}
+
+.banner-in {
+    height: 420px;
+    background: url("images/banner.jpg") center center no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+/* 2.1 左边菜单栏*/
+.slidbar {
+    height: 420px;
+    width: 190px;
+    background-color: rgba(0, 0, 0, 0.3);
+    float: left;
+}
+
+.slidbar li a {
+    color: #fff;
+    font-size: 14px;
+    padding: 0 20px;
+    /* a 是行内元素 给大小，需要转换*/
+    display: block;
+    height: 45px;
+    line-height: 45px;
+}
+
+.slidbar li a span {
+    float: right;
+    /*一般符号都是用 Arial*/
+    font-family: Arial;
+}
+
+.slidbar li a:hover {
+    color: #00a4ff;
+}
+
+/* 2.2 右边 小课程表*/
+.timetable {
+    float: right;
+    width: 230px;
+    height: 300px;
+    background-color: white;
+    margin-top: 50px;
+}
+
+.timetable dt {
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    background-color: #9bceea;
+    color: #fff;
+    /*文字加粗*/
+    font-weight: 700;
+    /*设置字间距*/
+    letter-spacing: 2px;
+    margin-bottom: 5px;
+}
+
+.timetable dd {
+    width: 193px;
+    height: 60px;
+    margin: 0 auto;
+    border-bottom: 1px solid #ccc;
+    padding-top: 12px;
+    box-sizing: border-box;
+
+}
+
+.timetable dd h4 {
+    font-size: 16px;
+    /*让粗体不粗*/
+    font-weight: normal;
+    color: #4e4e4e;
+}
+
+.timetable dd p {
+    color: #a5a5a5;
+    font-size: 10px;
+}
+
+.timetable dd:last-child {
+    border: 0;
+}
+
+.timetable dd a {
+    height: 38px;
+    border: 1px solid #00a4ff;
+    display: block;
+    line-height: 38px;
+    color: #00a4ff;
+    text-align: center;
+    font-weight: 700;
+}
+
+.timetable dd a:hover {
+    background-color: #00a4ff;
+    color: white;
+}
+
+/*小圆点模块*/
+.circle {
+    width: 180px;
+    height: 22px;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    margin-left: -90px;
+}
+
+.circle li {
+    float: left;
+    width: 12px;
+    height: 12px;
+    background-color: rgba(255, 255, 255, 0.4);
+    margin: 6px 8px;
+    border-radius: 50%;
+
+}
+
+.circle .current {
+    width: 19px;
+    border-radius: 5px;
+    background-color: white;
+
+}
+
+/* 2 banner部分 end*/
+
+/* 3 精品推荐部分*/
+.recommend {
+    height: 60px;
+    background-color: #fff;
+    margin-top: 8px;
+    /*盒子阴影 水平位置 垂直位置 模糊距离 颜色*/
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+    line-height: 60px;
+}
+
+.recommend a {
+    padding: 0 30px;
+    border-right: 1px solid #aaa;
+}
+
+.recommend a:first-child {
+    color: #00a4ff;
+}
+
+.recommend a:hover {
+    color: #00a4ff;
+}
+
+.recommend a:last-child {
+    border: 0;
+    color: #00a4ff;
+    float: right;
+}
+
+/* 3 精品推荐部分 end*/
+
+/* 4. 精品推荐详细*/
+
+.recommend-products {
+    margin-top: 35px;
+}
+
+.recommend-head {
+    height: 40px;
+}
+
+.recommend-head h4 {
+    float: left;
+    color: #494949;
+
+}
+
+.recommend-head a {
+    float: right;
+    margin-top: 10px;
+    font-size: 14px;
+    margin-right: 30px;
+    color: #ccc;
+}
+
+.recommend-head a:hover {
+    color: #00a4ff;
+}
+
+.recommend-body ul li {
+    width: 228px;
+    height: 270px;
+    background-color: white;
+    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+    float: left;
+    margin-right: 15px;
+    margin-top: 15px;
+}
+
+.recommend-body ul li:nth-child(5n) {
+    margin-right: 0;
+}
+
+.recommend-body ul li img {
+    width: 100%;
+    height: 155px;
+}
+
+.recommend-body li h5, .recommend-body li p {
+    padding: 0 20px 0 20px;
+    margin-top: 12px;
+}
+
+.recommend-body li h5 {
+    line-height: 22px;
+    font-weight: normal;
+    font-size: 14px;
+}
+
+.recommend-body li p {
+    font-size: 12px;
+    color: #999;
+}
+
+.recommend-body li p span {
+    color: #ff7c2d;
+}
+
+/* 精品推荐详细 end */
+
+/*页面底部份*/
+.footer {
+    height: 270px;
+    background-color: white;
+    margin-top: 100px;
+}
+
+.footer-in {
+    padding-top: 30px;
+}
+
+.footer-l p {
+    width: 350px;
+    font-size: 12px;
+    line-height: 18px;
+    color: #999;
+    margin-top: 20px;
+}
+
+.footer-l a {
+    display: block;
+    width: 118px;
+    height: 33px;
+    border: 1px solid #00a4ff;
+    text-align: center;
+    line-height: 33px;
+    color: #00a4ff;
+    font-size: 16px;
+    margin-top: 15px;
+}
+
+.footer-l {
+    float: left;
+}
+
+.footer-r {
+    float: right;
+    color: #333;
+}
+.footer-r dt {
+    height: 30px;
+    font-size: 16px;
+}
+.footer-r dd {
+    height: 20px;
+    font-size: 12px;
+}
+.footer-r dd a:hover {
+    color: #00a4ff;
+    text-decoration: underline;
+}
+.footer-r dl {
+    float: left;
+    width: 255px;
+}
+/*页面底部份 end*/
