@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div {
+            width: 658px;
+            height: 876px;
+            background-color: red;
+        }
+        /* 行内块元素，底线是基线对齐，所以存在底部有缝隙*/
+
+        img {
+            display: block;
+        }
+        img {
+            /* 用得最多的 而且不会转换为块级元素*/
+            vertical-align: top;
+        }
+    </style>
+</head>
+<body>
+<div>
+    <img src="images/46.jpg" height="876" width="658"/></div>
+</body>
+</html>
