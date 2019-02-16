@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div {
+            width: 100px;
+            height: 20px;
+            border: 1px solid red;
+            /* 强制在同一行内显示所有文本，知道文本结束或者遭遇br标签对线*/
+            white-space: nowrap;
+            overflow: hidden;
+
+            /* text-overflow 一定要满足上面两个属性*/
+            /*直接裁剪 */
+            text-overflow: clip;
+            /*超出部分用省略号代替*/
+            text-overflow: ellipsis;
+
+        }
+    </style>
+</head>
+<body>
+<div>
+    我的名字摸摸摸摸摸摸摸萨达实打实
+</div>
+</body>
+</html>
