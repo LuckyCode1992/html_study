@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div {
+            width: 253px;
+            height: 450px;
+            margin: 100px;
+            position: relative;
+        }
+        div:hover::before {
+            content: "";
+            width: 100%;
+            height: 100%;
+            border: 10px solid rgba(0,0,255,0.4);
+            display: block;
+            box-sizing: border-box;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+    </style>
+</head>
+<body>
+<div>
+    <img src="css_study/images/44.jpg" />
+
+</div>
+
+</body>
+</html>
