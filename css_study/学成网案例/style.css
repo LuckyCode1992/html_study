@@ -222,6 +222,8 @@ nav {
     color: #00a4ff;
     text-align: center;
     font-weight: 700;
+    /* 过渡效果 */
+    transition: background-color 0.5s;
 }
 
 .timetable dd a:hover {
@@ -322,10 +324,14 @@ nav {
     width: 228px;
     height: 270px;
     background-color: white;
-    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
     float: left;
     margin-right: 15px;
     margin-top: 15px;
+    transition: margin-top 0.2s;
+}
+.recommend-body ul li:hover {
+    margin-top: 10px;
+    box-shadow: 0 5px 5px 5px rgba(0, 0, 0, 0.2);
 }
 
 .recommend-body ul li:nth-child(5n) {
