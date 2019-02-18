@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        /*核心技术：背景+pading*/
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        a {
+            display: inline-block;
+            height: 33px;
+            margin: 100px;
+            /*不能给宽度 因为要推拉门 自由缩放*/
+            padding-left: 15px;
+            background: url("images/weixin_huadongmen.png") no-repeat;
+        }
+        a span {
+            height: 33px;
+            display: inline-block;
+            padding-right: 15px;
+            background: url("images/weixin_huadongmen.png") no-repeat right;
+            text-align: center;
+            line-height: 33px;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+<a href="#"><span>454654654655646546545645645645646</span></a>
+<a href="#"><span>中文</span></a>
+<a href="#"><span>英文</span></a>
+</body>
+</html>
