@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        /* .one 类选择器  :hover 伪类选择器  ::after 伪元素选择器*/
+
+        div::before {
+            content: "hello";
+            background: pink;
+            color: black;
+            border: 1px solid blue;
+            width: 100px;
+            height: 100px;
+            display: block;
+            /* 类选择器，伪类选择器 是选取对象 */
+            /* 伪元素选择器 本质上是插入一个元素（标签 盒子） 只不过默认是行内元素*/
+        }
+    </style>
+</head>
+<body>
+<div>neo</div>
+</body>
+</html>
