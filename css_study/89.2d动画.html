@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+        ul {
+            list-style: none;
+        }
+        div {
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+            transition: all 0.5s;
+        }
+
+        .translate:active {
+            transform: translate(50px, 50px);
+            /*transform: translateX(100px);*/
+            /*transform:translateY(100px);*/
+        }
+
+        .center {
+            /* 以前让盒子居中对齐： */
+            position: absolute;
+            left: 50%;
+            /*margin-left: -50px; */
+
+            /* 现在，更好的实现 */
+
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .roate {
+            background: url("images/47.jpg") no-repeat center;
+            background-size: cover;
+        }
+
+        .roate:hover {
+            /* 默认顺时针 逆时针就是-90*/
+            transform: rotate(360deg);
+            border-radius: 50%;
+        }
+
+        .roate2 {
+            margin: 100px;
+            background: url("images/31.jpg") no-repeat center;
+            background-size: cover;
+            /* 水平 垂直 居中，设置动画的中心点，基点*/
+            /*transform-origin: top center;*/
+            transform-origin: 10px 30px;
+
+        }
+
+        .roate2:hover {
+            transform: rotate(180deg);
+        }
+
+        .scale {
+            margin: 100px;
+        }
+
+        .scale:hover {
+            /* 如果只写一个参数是  x y 都缩放   */
+            transform: scale(1.2, 1.5);
+
+        }
+
+        .scale2 {
+            width: 253px;
+            height: 450px;
+            /*  溢出隐藏 */
+            overflow: hidden;
+        }
+
+        .scale2 img {
+            transition: all 0.2s;
+        }
+
+        .scale2:hover img {
+            transform: scale(1.2);
+        }
+        ul {
+            width: 100px;
+            height: 200px;
+            position: relative;
+            margin: 200px auto;
+            border: 1px solid pink;
+        }
+        ul li {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            transition: all 0.6s;
+            transform-origin: top right;
+        }
+       ul:hover li:nth-child(1){
+            background-color: lime;
+            transform: rotate(60deg);
+        }
+        ul:hover li:nth-child(2){
+            background-color: lightskyblue;
+            transform: rotate(120deg);
+        }
+        ul:hover li:nth-child(3){
+            background-color: lightsalmon;
+            transform: rotate(180deg);
+        }
+        ul:hover li:nth-child(4){
+            background-color: lemonchiffon;
+            transform: rotate(240deg);
+        }
+        ul:hover li:nth-child(5){
+            background-color: lightseagreen;
+            transform: rotate(300deg);
+        }
+        ul:hover li:nth-child(6){
+            background-color: lightcoral;
+            transform: rotate(360deg);
+        }
+        .skew {
+          margin: 100px;
+        }
+        .skew:hover {
+            /*transform: skew(10deg);*/
+            /*transform: skew(10deg,30deg);*/
+            transform: skew(-10deg,-30deg);
+        }
+    </style>
+</head>
+<body>
+<div class="translate"></div>
+<hr>
+<div class="center"></div>
+<hr>
+<div class="roate"></div>
+<hr>
+<div class="roate2"></div>
+<hr>
+<div class="scale"></div>
+<hr>
+<div class="scale2">
+    <img src="images/44.jpg"/>
+</div>
+<hr>
+<ul>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+</ul>
+<hr>
+<div class="skew"></div>
+
+</body>
+</html>
