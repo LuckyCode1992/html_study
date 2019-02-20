@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div {
+            width: 100px;
+            height: 200px;
+            background: url("images/31.jpg");
+            transition: all 0.5s;
+            background-size: cover;
+        }
+
+        .rorateX:hover {
+            transform: rotateX(180deg);
+        }
+
+        .rorateY:hover {
+            transform: rotateY(180deg);
+        }
+
+        .rorateZ:hover {
+            transform: rotateZ(180deg);
+        }
+
+        .threed {
+            /* 视距 距离 透视*/
+            perspective: 1000px;
+            background: white none no-repeat;
+
+        }
+
+        .threed img {
+            width: auto;
+            height: 100%;
+            /*transform-origin: left;*/
+            transform-origin: center;
+            transition: all 0.5s;
+        }
+
+        .threed:hover img {
+            transform: rotateY(70deg);
+        }
+        section {
+            perspective: 600px;
+        }
+        p {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            margin: 100px auto;
+            transition: all 1s;
+        }
+        section p:hover {
+            /* 透视 是 眼睛到屏幕的距离 透视只是一种展示形式，是由3d效果的意思 */
+            /* translateZ 是物体到屏幕的距离，Z 就是控制物体近大远小的具体情况 */
+            /* translateZ越大，我们看到物体越近，物体越大 */
+            /*transform: translateZ(100px);*/
+
+            /* x ,y 可以是px也可以%   z只能是px */
+            transform: translate3d(100px,100px,100px);
+        }
+    </style>
+</head>
+<body>
+<div class="rorateX"></div>
+<hr>
+<div class="rorateY"></div>
+<hr>
+<div class="rorateZ"></div>
+<hr>
+<div class="threed">
+    <img src="images/31.jpg" alt="">
+</div>
+<hr>
+<section>
+    <p></p>
+</section>
+</body>
+</html>
