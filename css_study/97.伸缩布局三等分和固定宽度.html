@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        section {
+            width: 80%;
+            height: 200px;
+            border: 1px solid pink;
+            margin: 100px auto;
+            /* 父级盒子 添加 flex 伸缩布局格式 */
+            display: flex;
+            /* 最小宽度 */
+            min-width: 600px;
+            /* 最大宽度 */
+            max-width: 1280px;
+            /* 排列方式 默认row 水平  column 是垂直排列*/
+            flex-direction: column;
+        }
+
+        section div {
+            height: 100%;
+            /* 子盒子 占有份数  */
+            /*flex: 1;*/
+
+        }
+
+        section div:nth-child(1) {
+            background-color: pink;
+            /*flex: 1;*/
+            width: 300px;
+        }
+
+        section div:nth-child(2) {
+            background-color: purple;
+            margin: 0 5px;
+            flex: 2;
+        }
+
+        section div:nth-child(3) {
+            background-color: palegoldenrod;
+            flex: 5;
+        }
+    </style>
+</head>
+<body>
+<section>
+    <div></div>
+    <div></div>
+    <div></div>
+</section>
+</body>
+</html>
