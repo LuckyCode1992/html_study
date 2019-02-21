@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        div {
+            width: 480px;
+            height: 80px;
+            border: 1px solid red;
+            margin: 100px auto;
+            overflow: hidden;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        ul {
+            width: 200%;
+            animation: moving 5s linear infinite;
+        }
+
+        ul li {
+            float: left;
+        }
+
+        @keyframes moving {
+            from {
+                transform: translateX(0);
+            }
+            to {
+                transform: translateX(-480px);
+            }
+        }
+        div:hover ul{
+            /* 鼠标经过暂停动画 */
+            animation-play-state: paused;
+        }
+    </style>
+</head>
+<body>
+<div>
+    <ul>
+        <li><img src="images/31.jpg" height="80" width="80"/></li>
+        <li><img src="images/42.jpg" height="80" width="80"/></li>
+        <li><img src="images/44.jpg" height="80" width="80"/></li>
+        <li><img src="images/45.jpg" height="80" width="80"/></li>
+        <li><img src="images/46.jpg" height="80" width="80"/></li>
+        <li><img src="images/47.jpg" height="80" width="80"/></li>
+
+        <li><img src="images/31.jpg" height="80" width="80"/></li>
+        <li><img src="images/42.jpg" height="80" width="80"/></li>
+        <li><img src="images/44.jpg" height="80" width="80"/></li>
+        <li><img src="images/45.jpg" height="80" width="80"/></li>
+        <li><img src="images/46.jpg" height="80" width="80"/></li>
+        <li><img src="images/47.jpg" height="80" width="80"/></li>
+
+
+    </ul>
+</div>
+</body>
+</html>
