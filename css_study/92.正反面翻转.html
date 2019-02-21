@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div{
+            position: relative;
+            width: 128px;
+            height: 128px;
+            margin: 100px auto;
+        }
+        div img{
+            top: 0;
+            left: 0;
+            position: absolute;
+            transition: all 0.5s;
+        }
+        div img:first-child {
+            z-index: 1;
+            /* 不是正面对象屏幕就隐藏 */
+            backface-visibility: hidden;
+        }
+        div:hover img {
+            transform: rotateY(180deg);
+        }
+
+    </style>
+</head>
+<body>
+<div>
+    <img src="images/hua1.png" alt="">
+    <img src="images/hua2.png" alt="">
+</div>
+</body>
+</html>
