@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        img {
+            animation: cargo 5s infinite;
+        }
+        @keyframes cargo {
+            0% {
+                transform: translateX(0);
+            }
+            50% {
+
+                transform: translateX(1000px);
+            }
+            51% {
+                /* 如果有多组属性 属于transform 用空格隔开 */
+                transform: translateX(1000px) rotateY(180deg);
+            }
+            100% {
+                transform: translateX(0) rotateY(180deg);
+            }
+        }
+    </style>
+</head>
+<body>
+<img src="images/car.png" alt="">
+</body>
+</html>
