@@ -11,10 +11,18 @@
             margin: 0 auto;
             display: flex;
 
+            /* 多行垂直居中 */
+            /*flex-direction: row;*/
+            /*align-content: center;*/
+
+            /*flex-flow: 排列方向 换行;*/
+            /*flex-flow: row wrap;*/
+
+
             /*水平方向的对齐方式*/
 
             /* 让子元素 从父容器的开头开始排序，盒子顺序不变*/
-            /*justify-content: flex-start;*/
+            justify-content: flex-start;
             /* 让子元素从父容器的结尾开始排序 盒子顺序不变 */
             /*justify-content: flex-end;*/
             /* 中间显示 */
@@ -22,23 +30,32 @@
             /* 盒子之间平均分配空间*/
             /*justify-content: space-between;*/
             /* 盒子左右加相同的margin */
-            justify-content: space-around;
+            /*justify-content: space-around;*/
 
 
             /*垂直方向的对齐方式*/
             /* 上对齐 */
-            /*align-items: flex-start;*/
+            align-items: flex-start;
             /* 下对齐 */
             /*align-items: flex-end;*/
             /* 居中对齐 */
-            align-items: center;
+            /*align-items: center;*/
             /* 子元素适应父元素高度  子元素不给高度*/
             /*align-items: stretch;*/
+
+            /* 默认 是不拆分，不换行，压缩显示*/
+            flex-wrap: nowrap;
+            /* 换行或者拆列 */
+            /*flex-wrap: wrap;*/
+
+            /* 翻转 用得少 */
+            /*flex-wrap: wrap-reverse;*/
+
 
         }
 
         div {
-            width: 200px;
+            width: 250px;
             height: 200px;
         }
         div:nth-child(1){
@@ -46,9 +63,18 @@
         }
         div:nth-child(2){
             background-color: lime;
+            /* 默认是0 数值越小越靠前*/
+            order: 1;
         }
         div:nth-child(3){
             background-color: khaki;
+            order: -1;
+        }
+        div:nth-child(4){
+            background-color: deeppink;
+        }
+        div:nth-child(5){
+            background-color: deepskyblue;
         }
     </style>
 </head>
@@ -58,6 +84,8 @@
     <div>1</div>
     <div>2</div>
     <div>3</div>
+    <div>4</div>
+    <div>5</div>
 </section>
 </body>
 </html>
