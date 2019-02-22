@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        section {
+            width: 1000px;
+            height: 600px;
+            border: 1px solid pink;
+            margin: 0 auto;
+            display: flex;
+
+            /*水平方向的对齐方式*/
+
+            /* 让子元素 从父容器的开头开始排序，盒子顺序不变*/
+            /*justify-content: flex-start;*/
+            /* 让子元素从父容器的结尾开始排序 盒子顺序不变 */
+            /*justify-content: flex-end;*/
+            /* 中间显示 */
+            /*justify-content: center;*/
+            /* 盒子之间平均分配空间*/
+            /*justify-content: space-between;*/
+            /* 盒子左右加相同的margin */
+            justify-content: space-around;
+
+
+            /*垂直方向的对齐方式*/
+            /* 上对齐 */
+            /*align-items: flex-start;*/
+            /* 下对齐 */
+            /*align-items: flex-end;*/
+            /* 居中对齐 */
+            align-items: center;
+            /* 子元素适应父元素高度  子元素不给高度*/
+            /*align-items: stretch;*/
+
+        }
+
+        div {
+            width: 200px;
+            height: 200px;
+        }
+        div:nth-child(1){
+            background-color: purple;
+        }
+        div:nth-child(2){
+            background-color: lime;
+        }
+        div:nth-child(3){
+            background-color: khaki;
+        }
+    </style>
+</head>
+<body>
+
+<section>
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+</section>
+</body>
+</html>
