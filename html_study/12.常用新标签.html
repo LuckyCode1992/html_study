@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        span {
+            width: 60px;
+            display: inline-block;
+            text-align: justify;
+            text-align-last: justify;
+        }
+    </style>
+
+</head>
+<body>
+<header>定义页面的头部 页眉</header>
+<nav>定义导航栏</nav>
+<footer>定义页面底部 页脚</footer>
+<article>定义文章</article>
+<section>定义小区块 区域</section>
+<aside>定义侧边</aside>
+<input type="text" value="输入明星" list="star"/>
+<!--datalist 用id 来实现input 的关联-->
+<datalist id="star">
+    <option>刘德华</option>
+    <option>刘若英</option>
+    <option>郭富城</option>
+    <option>章子怡</option>
+    <option>张学友</option>
+</datalist>
+<hr>
+<br>
+<!--相关元素分组打包-->
+<fieldset>
+    <!--标题-->
+    <legend>用户登录</legend>
+    <span>用户名</span>：<input type="text"><br><br>
+    <span>密码</span>：<input type="text">
+</fieldset>
+</body>
+</html>
