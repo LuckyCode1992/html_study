@@ -3,7 +3,74 @@
     width: 1190px;
     margin: 0 auto;
 }
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style: none;
+
+}
+
+a {
+    text-decoration: none;
+    color: #999;
+}
+
+.f10 {
+    color: #f10215;
+}
+a:hover {
+    color: #c81623;
+}
+body {
+    background-color: #f6f6f6;
+}
+
 header {
     height: 80px;
     background-color: #020000;
 }
+
+/*浮动 公共类*/
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+/* 快速导航栏 start*/
+.shortcut {
+    background-color: #e3e4e5;
+    height: 32px;
+    border-bottom: 2px solid #ddd;
+    box-sizing: border-box;
+    font-size: 12px;
+    line-height: 32px;
+    color: #999;
+}
+
+.city {
+    margin-left: 200px;
+}
+
+.shortcut li {
+    float: left;
+}
+
+.space {
+    width: 1px;
+    height: 10px;
+    background-color: #999;
+    margin-top: 10px;
+    margin-left: 12px;
+    margin-right: 12px;
+
+}
+
+/* 快速导航栏 end*/
+
