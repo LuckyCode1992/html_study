@@ -1,0 +1,9 @@
+.w {
+    /* 京东的版心是 1190*/
+    width: 1190px;
+    margin: 0 auto;
+}
+header {
+    height: 80px;
+    background-color: #020000;
+}
