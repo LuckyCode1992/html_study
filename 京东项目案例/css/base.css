@@ -9,9 +9,19 @@
     padding: 0;
 }
 
+ul, h1, input, button {
+    margin: 0;
+    padding: 0;
+}
+
+input, button {
+    border: 0;
+    /*取消轮廓边框*/
+    outline: none;
+}
+
 ul {
     list-style: none;
-
 }
 
 a {
@@ -22,9 +32,11 @@ a {
 .f10 {
     color: #f10215;
 }
+
 a:hover {
     color: #c81623;
 }
+
 body {
     background-color: #f6f6f6;
 }
@@ -72,5 +84,85 @@ header {
 
 }
 
+.icon {
+    width: 1em;
+    height: 1em;
+    vertical-align: -0.15em;
+    fill: currentColor;
+    overflow: hidden;
+}
+
+.shortcut svg {
+    font-size: 12px;
+}
+
+.shortcut .location {
+    font-size: 15px;
+    color: orange;
+}
+
+.mobile {
+    position: relative;
+}
+
+.mobile img {
+    position: absolute;
+    top: 32px;
+    left: -2px;
+    border: 1px solid #ccc;
+    padding: 2px;
+}
+
 /* 快速导航栏 end*/
+
+/* 中间部分 start*/
+.middle {
+    height: 140px;
+    position: relative;
+}
+
+.logo a {
+    display: block;
+    background: url("../images/logo.png") no-repeat center;
+    width: 190px;
+    height: 170px;
+
+}
+
+.logo {
+    position: absolute;
+    left: 0;
+    top: -32px;
+    box-shadow: 0px -10px 10px rgba(0, 0, 0, .3);
+}
+
+.form {
+    width: 550px;
+    height: 35px;
+    position: absolute;
+    top: 25px;
+    left: 320px;
+    background-color: pink;
+}
+
+.form input {
+    box-sizing: border-box;
+    width: 500px;
+    height: 35px;
+    border: 1px solid red;
+    float: left;
+    font-size: 14px;
+    padding-left: 3px;
+}
+
+.form button {
+    float: left;
+    width: 50px;
+    height: 35px;
+    background-color: red;
+    color: white;
+    font-size: 18px;
+}
+
+/* 中间部分 end*/
 

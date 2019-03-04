@@ -13,10 +13,8 @@
     <link rel="icon" href="favicon.ico">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/base.css">
-
-    <style>
-
-    </style>
+    <!--引用 iconfont库  // 表示自动匹配 http，https-->
+    <script src="//at.alicdn.com/t/font_1068774_h2rax752wm9.js"></script>
 </head>
 <body>
 <!--header start-->
@@ -33,7 +31,13 @@
 <div class="shortcut">
     <div class="w">
         <ul class="fl city">
-            <li><a href="#">! 北京</a></li>
+            <li>
+                <svg class="icon location" aria-hidden="true">
+                    <use xlink:href="#icon-dingwei"></use>
+                </svg>
+                <a href="#">! 北京</a>
+
+            </li>
         </ul>
         <ul class="fr">
             <li>
@@ -47,6 +51,9 @@
             <li class="space"></li>
             <li>
                 <a href="#">我的京东</a>
+                <svg class="icon" aria-hidden="true">
+                    <use xlink:href="#icon-jiantou_liebiaozhankai"></use>
+                </svg>
             </li>
             <li class="space"></li>
             <li>
@@ -59,18 +66,46 @@
             <li class="space"></li>
             <li>
                 <a href="#">客户服务</a>
+                <svg class="icon" aria-hidden="true">
+                    <use xlink:href="#icon-jiantou_liebiaozhankai"></use>
+                </svg>
             </li>
             <li class="space"></li>
             <li>
                 <a href="#">网站导航</a>
+                <svg class="icon" aria-hidden="true">
+                    <use xlink:href="#icon-jiantou_liebiaozhankai"></use>
+                </svg>
             </li>
             <li class="space"></li>
-            <li>
+            <li  class="mobile">
                 <a href="#">手机京东</a>
+                <img class="qrcode" src="images/mobile_qrcode.png" alt="">
+                <!--<img class="qrcode2" src="images/mobile-qrcode2.png" alt="">-->
             </li>
         </ul>
     </div>
 </div>
 <!--快速导航栏部分 end-->
+<!--中间部分 start-->
+<div class="middle w">
+<div class="logo">
+    <!--提高权重 便利于搜索引擎文件-->
+    <h1>
+        <a href="#"></a>
+    </h1>
+</div>
+    <!--搜索框-->
+    <div class="form">
+        <input type="text" placeholder="扫描仪">
+        <button>
+            <svg class="icon location" aria-hidden="true">
+                <use xlink:href="#icon-fangdajing"></use>
+            </svg>
+        </button>
+    </div>
+</div>
+<!--中间部分 end-->
+
 </body>
 </html>
