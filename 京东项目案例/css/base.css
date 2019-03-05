@@ -190,5 +190,11 @@ header {
     color: white;
     line-height: 15px;
 }
+.hotwords {
+    position: absolute;
+    left: 320px;
+    top: 65px;
+    font-size: 12px;
+}
 /* 中间部分 end*/
 
