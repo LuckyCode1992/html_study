@@ -4,6 +4,18 @@
     margin: 0 auto;
 }
 
+.clearfix:after, .clearfix:before {
+    content: "";
+    /* 触发bfc 防止外边距合并*/
+    display: table;
+}
+.clearfix:after {
+    clear: both;
+}
+.clearfix {
+    *zoom: 1;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -246,8 +258,33 @@ footer {
 }
 
 .service {
-    height: 102px;
+    padding: 30px 0;
     border-bottom: 1px #dedede solid;
+}
+.service li {
+    width: 297px;
+    height: 43px;
+    position: relative;
+    float: left;
+}
+.service li p {
+    font-weight: 700;
+    margin-left: 82px;
+    line-height: 43px;
+}
+.service li h5 {
+    position: absolute;
+    top: 0;
+    left: 38px;
+    width: 37px;
+    height: 43px;
+    background: url("../images/duokuai.png") no-repeat center;
+    background-size: 37px 43px;
+    color: #A0101B;
+    font-size: 18px;
+    text-align: center;
+    line-height: 43px;
+
 }
 
 /*页面底部 end*/
