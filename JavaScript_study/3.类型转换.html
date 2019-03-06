@@ -3,8 +3,82 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <script>
+
+        /**
+         * 其他类型 转为 String
+         */
+        var a = 123
+        check()
+        a = a.toString()
+        check()
+        a = true
+        check()
+        a = a.toString()
+        check()
+
+        // 注意 null和undefine 没有toString方法。
+        //toString 以为的方法转为String String（）
+        a = null;
+        String(a);
+        check()
+        a = undefined
+        check()
+
+        console.log("------")
+        /**
+         * 其他数据类型转为number
+         * 用Number（）函数
+         */
+        var n = "123";
+        n = Number(n);
+        check2();
+        n = "qq";
+        n = Number(n);
+        check2();
+        n = true;
+        n = Number(n);
+        check2();
+        n = false;
+        n = Number(n);
+        check2();
+        n = null;
+        n = Number(n);
+        n = check2();
+        n = undefined;
+        n = Number(n);
+        check2();
+        n = "1212qqw"
+        n = parseInt(n);
+        check2();
+        n = "qq55";
+        n = parseInt(n);
+        check2();
+
+        function check2() {
+            console.log(typeof n);
+            console.log(n)
+        }
+
+        function check() {
+            console.log(typeof a);
+            console.log(a)
+        }
+    </script>
 </head>
 <body>
+<p>js中，一共有6种基本类型</p>
+<p>String 字符串</p>
+<p>Number 数值</p>
+<p>Boolean 布尔值</p>
+<p>Null 空值</p>
+<p>Undefined 未定义</p>
+<p>Object 对象 这属于引用类型</p>
+<h3>类型转换</h3>
+<h4>主要是指 String Number Boolean 之间的转换</h4>
+<hr>
+<h4>其他类型转换为String</h4>
+
 
 </body>
 </html>
