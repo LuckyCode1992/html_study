@@ -55,6 +55,32 @@
         n = parseInt(n);
         check2();
 
+        /**
+         * 其他类型转换为Boolean
+         * Boolean()
+         */
+        var c = 123;
+        c = Boolean(c);
+        check3()
+        c = 0;
+        c = Boolean(c)
+        check3()
+        c = "qq";
+        c = Boolean(c);
+        check3()
+        c = undefined;
+        c = Boolean(c)
+        check3()
+        c = null
+        c = Boolean(c)
+        check3()
+
+
+        function check3() {
+            console.log(typeof c);
+            console.log(c)
+        }
+
         function check2() {
             console.log(typeof n);
             console.log(n)
