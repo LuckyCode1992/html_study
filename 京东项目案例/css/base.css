@@ -9,9 +9,11 @@
     /* 触发bfc 防止外边距合并*/
     display: table;
 }
+
 .clearfix:after {
     clear: both;
 }
+
 .clearfix {
     *zoom: 1;
 }
@@ -261,17 +263,20 @@ footer {
     padding: 30px 0;
     border-bottom: 1px #dedede solid;
 }
+
 .service li {
     width: 297px;
     height: 43px;
     position: relative;
     float: left;
 }
+
 .service li p {
     font-weight: 700;
     margin-left: 82px;
     line-height: 43px;
 }
+
 .service li h5 {
     position: absolute;
     top: 0;
@@ -285,6 +290,52 @@ footer {
     text-align: center;
     line-height: 43px;
 
+}
+
+.help {
+    height: 200px;
+    border-bottom: 1px #dedede solid;
+    box-sizing: border-box;
+    padding-top: 25px;
+}
+
+.help dt, .coverage h5 {
+    height: 30px;
+    font-weight: 700;
+    font-size: 14px;
+    color: #666666;
+}
+
+.help dd {
+    height: 22px;
+}
+
+.help dl {
+    width: 192px;
+    float: left;
+}
+
+.coverage {
+    width: 200px;
+    height: 150px;
+    background: url("../images/help_bgc.png");
+}
+
+.coverage h5 {
+    text-align: center;
+}
+.coverage p {
+    font-size: 12px;
+    width: 180px;
+    color: #666666;
+    line-height: 18px;
+}
+.coverage a {
+    display: block;
+    margin-top: 5px;
+    width: 180px;
+    text-align: right;
+    font-size: 14px;
 }
 
 /*页面底部 end*/
