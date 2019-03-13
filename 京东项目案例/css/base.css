@@ -324,18 +324,78 @@ footer {
 .coverage h5 {
     text-align: center;
 }
+
 .coverage p {
     font-size: 12px;
     width: 180px;
     color: #666666;
     line-height: 18px;
 }
+
 .coverage a {
     display: block;
     margin-top: 5px;
     width: 180px;
     text-align: right;
     font-size: 14px;
+}
+
+.copyright {
+    padding-top: 20px;
+    text-align: center;
+    color: #666666;
+    font-size: 12px;
+}
+
+.copyright a {
+    color: #666666;
+}
+
+.copyright span {
+    margin: 0 10px;
+}
+
+.copyright div p {
+    line-height: 20px;
+}
+
+.copyright div {
+    margin-top: 20px;
+}
+
+.copyright a:hover {
+    color: #c81623;
+}
+
+.foot-icon {
+    margin-top: 20px;
+}
+
+.foot-icon a {
+    display: inline-block;
+    width: 103px;
+    height: 33px;
+    background: url("../images/help_bgc.png") no-repeat;
+}
+
+.foot-icon a:nth-child(1) {
+    background-position: -205px -111px;
+}
+
+.foot-icon a:nth-child(2) {
+    background-position: -205px -74px;
+}
+
+.foot-icon a:nth-child(3) {
+    background-position: -205px -37px;
+}
+
+.foot-icon a:nth-child(4) {
+    background-position: -205px 0;
+}
+
+.foot-icon a:nth-child(5) {
+    background-position: 0 -155px;
 }
 
 /*页面底部 end*/
