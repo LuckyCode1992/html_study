@@ -42,6 +42,12 @@ a {
     text-decoration: none;
     color: #999;
 }
+img {
+    /*display: block;*/
+
+    /*解决图片底部有缝隙*/
+    vertical-align: top;
+}
 
 .f10 {
     color: #f10215;

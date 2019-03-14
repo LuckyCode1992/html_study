@@ -1,0 +1,53 @@
+.grid {
+    height: 480px;
+}
+
+.grid .grid-col1 {
+    width: 190px;
+    height: 100%;
+    background-color: #6e6568;
+}
+
+.grid .grid-col2 {
+    margin-left: 10px;
+    width: 790px;
+    height: 100%;
+}
+
+.grid .grid-col3 {
+    width: 190px;
+    height: 100%;
+    background-color: white;
+}
+
+.grid-col1 ul {
+    padding: 10px 0;
+    /*这个给反斜杠*/
+    font-size: 14px;
+    color: white;
+}
+
+.grid-col1 a {
+    color: white;
+    font-size: 16px;
+    margin: 0 3px;
+}
+
+.grid-col1 a:hover {
+    color: #a10215;
+}
+
+.grid-col1 ul li {
+    padding-left: 12px;
+    height: 26px;
+    line-height: 26px;
+
+}
+
+.grid-col1 li:hover {
+    background-color: #9c9698;
+}
+
+.grid-col2-b div {
+    margin-top: 10px;
+}
