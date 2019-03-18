@@ -51,16 +51,18 @@
 .grid-col2-b div {
     margin-top: 10px;
 }
+
 .grid-col2-t {
     position: relative;
 }
+
 .arrow-l,
 .arrow-r {
     position: absolute;
     top: 50%;
     width: 30px;
     height: 60px;
-    background-color: rgba(0,0,0,0.3);
+    background-color: rgba(0, 0, 0, 0.3);
     transform: translateY(-50%);
     text-align: center;
     line-height: 60px;
@@ -78,10 +80,11 @@
     fill: red;
     color: red;
 }
+
 .circle {
     width: 175px;
     height: 20px;
-    background-color: rgba(255,255,255,0.3);
+    background-color: rgba(255, 255, 255, 0.3);
     position: absolute;
     bottom: 20px;
     left: 50%;
@@ -90,6 +93,7 @@
     padding-left: 9px;
     box-sizing: border-box;
 }
+
 .circle li {
     width: 12px;
     height: 12px;
@@ -100,6 +104,78 @@
     /* 鼠标经过的时候变成小手 */
     cursor: pointer;
 }
+
 .circle .current {
     background-color: #f10125;
+}
+
+.login {
+    height: 115px;
+    border-bottom: 1px solid #ccc;
+    box-sizing: border-box;
+    padding: 15px;
+}
+
+.news {
+    height: 155px;
+    border-bottom: 1px solid #ccc;
+    box-sizing: border-box;
+    background-color: purple;
+}
+
+.expand {
+    height: 209px;
+    box-sizing: border-box;
+    background-color: skyblue;
+}
+
+.login-t {
+    width: 95px;
+    height: 60px;
+    line-height: 16px;
+    font-size: 12px;
+    /*强制一行内显示*/
+    white-space: nowrap;
+    /*超出隐藏*/
+    overflow: hidden;
+    /*超出的部分显示省略号*/
+    text-overflow: ellipsis;
+    color: #666;
+    padding-left: 68px;
+    position: relative;
+}
+.login-t a {
+    color: #666;
+}
+.login-t a:hover {
+    color: #a10215;
+}
+.login-t a img {
+    border: 5px solid yellow;
+    border-radius: 50%;
+}
+.user-info {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    left: 0px;
+    top: 0;
+}
+.login-b {
+    margin-top: 5px;
+}
+.login-b a {
+    display: inline-block;
+    width: 70px;
+    height: 20px;
+    border: 2px solid #f10215;
+    font-size: 12px;
+    text-align: center;
+    line-height: 20px;
+    margin-right: 3px;
+    color: #f10215;
+}
+.login-b a:hover {
+    background-color: #f10215;
+    color: white;
 }
