@@ -117,12 +117,51 @@
 }
 
 .news {
-    height: 155px;
+    height: 154px;
     border-bottom: 1px solid #ccc;
     box-sizing: border-box;
-    background-color: purple;
+    background-color: white;
+    border-bottom: 1px solid #ccc;
+    padding: 7px 13px 0;
 }
+.news-t {
+    position: relative;
+    height: 19px;
+    border-bottom: 1px solid #ccc;
+}
+.news-t a {
+    float: left;
+    height: 17px;
+    line-height: 17px;
+    display: block;
+    font-size: 14px;
+}
+.cuxiao {
+    width: 42px;
 
+    border-right: 1px solid #ccc;
+}
+.gonggao {
+    margin-left: 15px;
+}
+.news-t .more {
+    float: right;
+}
+.news-t div {
+    height: 2px;
+    width: 28px;
+    background-color: red;
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+}
+.news-b ul {
+    margin-top: 17px;
+}
+.news-b li {
+    height: 23px;
+    line-height: 23px;
+}
 .expand {
     height: 209px;
     box-sizing: border-box;
