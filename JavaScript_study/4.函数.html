@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        function tes1() {
+            console.log(arguments.length)
+            console.log(arguments[0])
+            console.log(arguments[1])
+            console.log(arguments[2])
+            console.log(arguments[3])
+        }
+
+        function test2(name) {
+            console.log(arguments.length);
+            console.log(name);
+        }
+
+        // test2('415645',546546);
+
+        // tes1(1, 2, "qwertyuiopas");
+
+        // function aaa() {
+        //     return{
+        //       test:1
+        //     };
+        // }
+        // console.info(typeof aaa())
+
+        // var x = 1;
+        // if (function f() {
+        // }) {
+        //     x += typeof f;
+        // }
+        // console.log(x)
+
+       console.log(
+           (function (foo) {
+               return typeof foo.bar;
+           })({foo:{bar:1}})
+
+       ) ;
+        console.log(true+false);
+        console.log(2-true);
+
+        console.log(typeof null);
+        console.log(typeof Array);
+
+        console.log(0==false);
+        console.log(!!null);
+        console.log(1&&0);
+        console.log(null==NaN);
+
+        console.log(typeof ("123"+0));
+        console.log(("123"+0));
+
+        console.log(typeof ("123"-0));
+        console.log(("123"-0));
+        console.log(typeof (+"123"));
+        console.log((+"123"));
+        var kk = "123"++;
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
