@@ -35,31 +35,34 @@
         // }
         // console.log(x)
 
-       console.log(
-           (function (foo) {
-               return typeof foo.bar;
-           })({foo:{bar:1}})
-
-       ) ;
-        console.log(true+false);
-        console.log(2-true);
+        console.log(
+            (function (foo) {
+                return typeof foo.bar;
+            })({foo: {bar: 1}})
+        );
+        console.log(true + false);
+        console.log(2 - true);
 
         console.log(typeof null);
         console.log(typeof Array);
 
-        console.log(0==false);
+        console.log(0 == false);
         console.log(!!null);
-        console.log(1&&0);
-        console.log(null==NaN);
+        console.log(1 && 0);
+        console.log(null == NaN);
 
-        console.log(typeof ("123"+0));
-        console.log(("123"+0));
+        console.log(typeof ("123" + 0));
+        console.log(("123" + 0));
 
-        console.log(typeof ("123"-0));
-        console.log(("123"-0));
+        console.log(typeof ("123" - 0));
+        console.log(("123" - 0));
         console.log(typeof (+"123"));
         console.log((+"123"));
-        var kk = "123"++;
+        var kk = "123";
+        var m = kk++
+        console.log(typeof m);
+        console.log(m);
+
 
     </script>
 </head>

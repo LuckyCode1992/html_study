@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body {
+            perspective: 1000px;
+        }
+
+        /*div {*/
+        /*width: 100px;*/
+        /*height: 145px;*/
+        /*border: 1px solid red;*/
+        /*margin: 100px auto;*/
+        /*transform: rotateY(30deg);*/
+        /*!* 让父盒子里的子盒子 有3d效果*!*/
+        /*transform-style: preserve-3d;*/
+        /*box-sizing: border-box;*/
+        /*}*/
+
+        /*div img {*/
+        /*transform: rotateY(30deg);*/
+        /*border: 3px solid blue;*/
+        /*box-sizing: border-box;*/
+        /*}*/
+
+        section {
+            width: 300px;
+            height: 200px;
+            margin: 100px auto;
+            background: url("images/31.jpg") no-repeat center;
+            background-size: cover;
+            position: relative;
+            transform-style: preserve-3d;
+            transition: all 5s linear;
+        }
+
+        section div {
+            width: 100%;
+            height: 100%;
+            background: url("images/44.jpg");
+            background-size: cover;
+            position: absolute;
+            left: 0;
+            top: 0;
+
+        }
+
+        section div:nth-child(1) {
+            transform: rotateY(0deg) translateZ(400px);
+        }
+
+        section div:nth-child(2) {
+            transform: rotateY(60deg) translateZ(400px);
+        }
+
+        section div:nth-child(3) {
+            transform: rotateY(120deg) translateZ(400px);
+        }
+
+        section div:nth-child(4) {
+            transform: rotateY(180deg) translateZ(400px);
+        }
+
+        section div:nth-child(5) {
+            transform: rotateY(240deg) translateZ(400px);
+        }
+
+        section div:nth-child(6) {
+            transform: rotateY(300deg) translateZ(400px);
+        }
+
+        section:hover {
+            transform: rotateY(360deg);
+        }
+    </style>
+</head>
+<body>
+
+<!--<div>-->
+
+<!--<img src="images/puke.png" width="100px" height="145px"/>-->
+<!--</div>-->
+<section>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+</section>
+</body>
+</html>
