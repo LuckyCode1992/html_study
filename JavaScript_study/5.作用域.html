@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        function a() {
+            var aVar = 1;
+
+            // console.log("c: aVar="+aVar+" bVar="+bVar+" cVar="+cVar)
+            function b() {
+                var bVar = 2;
+
+                // console.log("c: aVar="+aVar+" bVar="+bVar+" cVar="+cVar)
+                function c() {
+                    var cVar = 3;
+                    console.log("c: aVar=" + aVar + " bVar=" + bVar + " cVar=" + cVar)
+                }
+
+
+                c()
+            }
+
+            b()
+        }
+
+        a()
+
+        function applyArr() {
+            var arr = [];
+            for (var i = 0; i < 10; i++) {
+                arr.push(function () {
+                    return i;
+                })
+            }
+            return arr;
+        }
+
+        //闭包
+        function applyArr2() {
+            var arr = [];
+            for (var i = 0; i < 10; i++) {
+                (function (index) {
+                    arr.push(function () {
+                        return index;
+                    })
+                })(i);
+
+            }
+            return arr;
+        }
+
+        var arr = applyArr();
+        var b = arr[1]();
+
+        var arr2 =applyArr2();
+        var c =arr2[1]();
+        console.log(b);
+        console.log(c);
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
