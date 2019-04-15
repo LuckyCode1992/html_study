@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        var person = {};
+        person.a = 1;
+        person["a"] = 1;
+        person = {
+            a: 1,
+            _age: 0
+        };
+
+        //数据属性
+        Object.defineProperty(person, "name", {
+            writable: false,
+            configurable: true,
+            value: "jack"
+        });
+
+
+        //访问器属性 属性_xx
+        Object.defineProperty(person, "age", {
+            get: function () {
+                console.log("get:" + this._age);
+                return this._age
+            },
+            set: function (newValue) {
+                console.log("set:newValue=" + newValue);
+                if (newValue > 2004) {
+                    this._age = newValue;
+                } else {
+                    this._age = 0
+                }
+                console.log("set:" + this._age);
+            }
+        });
+        person.name = "kk";
+        alert(person.name);
+        person.age = 2008;
+        console.log("person.age:" + person.age);
+    </script>
+</head>
+<body>
+
+</body>
+</html>
